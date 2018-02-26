@@ -1,0 +1,22 @@
+Volatile :
+Thread dont want to get modify from other thread  while it is running. in some of the systems one thread caches the task which it performs
+and don't get change from the other method call. like variable changes from false to true or vice versa. 
+in that situation we use volatile keyword for handling this situation. SEE. VolatileExample class
+
+synchronized keyword: if one or more threads sharing the same resouce so there might be possibility of inconsitency in data. for example 
+count increasing is done by 2 threads then we need to make sure verything happens correctly. 
+for this we use synchronized keyword with the method of the resource so that the once first thread executes the method completly then oly
+secod thread accqire the lock. it is for locking. SEE. SynchronizedKeywordExample.
+
+ThreadPool: to create n numbers of thread and run it to comeplete some task we use this concept
+see: https://www.journaldev.com/1069/threadpoolexecutor-java-thread-pool-example-executorservice
+
+CountDownLatch: this is the synchonizer. used when one thread to wait to start all the processing of other thread (declared in count down latch)
+once any thread is done it count downs then other will process till the count is zero then only main thread(for example) will continue
+till the time it will await for all the threads to execute.
+THIS CAN BE ACHIEVED BY THE wait() and notify() METHOD AS WELL, BUT IT TAKES SO MUCH CODE TO WRITE.
+
+wait and notify: wait pauses the thread execution and releases the lock. once notify method is called it resumes the lock.
+
+Re-entrant lock and Condition: reentrant lock is the one of alrenative of synchronized block. condition is used for wait and notify alternative.
+

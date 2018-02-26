@@ -1,0 +1,19 @@
+Java 8 features:
+
+1. functional programming 
+2. lamda expressions
+3. Stream API
+
+- we can write methods inside interfaces using default keyword.
+- we can also write static method inside interface. and directly calls it as I.show().
+but now this creates problem of diamond. since we have method inside interface and also we can implement multiple interfaces 
+then what will happen when the same method for ex. show() is inside both the interface Interface1 and Interface2. to solve this,
+we have to implement the slow method inside out class which implemnts both the interfaces.
+
+problem 2 - if we have interface I having one default method show() and class A is also having method show() now if class B extends A,
+then which show() method will be called, the Answer is class A's show method, as class have more power comapre to interface.
+which means default has low priority. 
+
+scenario 3: if we have interface having one method called 'default boolean equals(Object o){}' then will it be ok.
+the answer is NO. beacuse if interface has default method which has the same signature as Object's class method then it will not compile.
+
